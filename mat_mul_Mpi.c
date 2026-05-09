@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include <stdbool.h>
 
 void get_size(int my_rank, int* rows, int* columns){
     if(my_rank == 0){
