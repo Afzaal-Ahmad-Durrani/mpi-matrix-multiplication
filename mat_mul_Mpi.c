@@ -193,8 +193,8 @@ int main(){
 
     for(int i = 0; i < comm_size; i++){
         int current_rows = base_rows; 
-        if(i < remainder){
-            current_rows += 1;
+        if(i == comm_size - 1){
+            current_rows += remainder;
         }
         gather_counts[i] = current_rows * col2; 
         gather_displs[i] = current_gather_displ; 
